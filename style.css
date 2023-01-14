@@ -117,6 +117,7 @@ nav > ul{
    font-weight: 400;
    font-size: 16px;
    margin-bottom: 25px;
+   color:var(--gray)
 }
 /* ---------------Service Section----------- */
 .service-title{
