@@ -15,7 +15,6 @@
  }
 
 body{
-   /* <!-- background-color: var(--light-gray); --> */
    font-family: var(--primary-font);
 }
 .btn{
@@ -38,22 +37,20 @@ body{
 }
 nav{
    display:flex;
-   flex-wrap: wrap;
-   height:100px;
-   margin-top: 100px;
-   margin-bottom: 50px;
-   
+   flex-wrap: wrap;   
 }
 
 nav > ul{
    display: flex;
    flex-wrap: wrap;
    list-style: none;
+   margin-top: 50px;
    gap:25px;
 }
 .container-title {
    font-weight: 700;
    font-size: 45px;
+   margin-top: 50px;
    color:var(--black);
 }
 .nav-list {
@@ -63,6 +60,7 @@ nav > ul{
 }
 /* Introduction Part */
 .introduction{
+   margin-top: 30px;
    text-align: center;
    padding: 2rem 25px;
 }
@@ -83,9 +81,10 @@ nav > ul{
    justify-content: center;
    height:700px;
    padding: 2rem 25px;
+   width:100%;
 }
 
-/* -------Explore Features---------- */
+/* -------Explore Features Section---------- */
 .features-imgs{
    display: flex;
    flex-wrap: wrap;
@@ -109,9 +108,10 @@ nav > ul{
    border-radius: 8px;
 }
 .feature-title{
-   font-weight: 500;
+   font-weight: 700;
    font-size: 45px;
    margin-bottom: 25px;
+   color:var(--black);
 }
 .feature-summary{
    font-weight: 400;
@@ -133,7 +133,6 @@ nav > ul{
    font-weight: 600;
    font-size: 20px;
    padding: 20px 20px 8px 15px;
-   /* margin-bottom: 20px; */
    color:var(--black);
 }
 .small-desp{
@@ -206,24 +205,34 @@ nav > ul{
 }
 .icon{
    border: 1px solid #FF900E;
-   border-radius: 8px;
+   width: 220px;
    height: 160px;
    border-radius: 8px;
+   border-radius: 8px;
    text-align: center;
-   padding: 25px; 
+   padding: 20px; 
    margin-left: 30px;
    margin-bottom: 30px;
+   cursor:pointer;
 }
+
 .fact-icons{
    display: flex;
    flex-wrap: wrap;
    align-items: center;
    justify-content: start;
-   gap: 124px;
+   gap: 115px;
+}
+
+.icon img:hover {
+   background-color: rgb(148, 207, 148);
+   transition: 2s;
+   transform: scale(1.5);
+   z-index:2;
 }
 .icone-title{
    font-weight: 600;
-   font-size: 45px;
+   font-size: 35px;
    color:var(--dark-gray)}
 .award-name{
    font-weight: 600;
@@ -236,12 +245,51 @@ nav > ul{
    margin-top: 70px;
    margin-bottom: 60px;
 }
+.gray-img{
+   width: 166px;
+   height: 50px;
+-webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
 
 .logo{
    display:flex;
    flex-wrap: wrap;
    justify-content: space-around;
    margin-bottom: 100px;
+   padding:20px;
+}
+
+/* ----------------Appoinment Section---------------------- */
+.call-icon{
+      width:90px;
+      padding: 5px;
+  }
+  .phone-call{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+}
+  .appoinment-btn{
+   background-color: var(--white);
+   color: var(--orange);
+   cursor: pointer;
+   border-radius: 16px;
+   font-size: 16px;
+   height:40px;
+   margin: 5px;
+   padding: 10px;
+  }
+  
+.appoinment-section{
+   text-align: center;
+   padding: 15px;
+   background-color: var(--orange);
+   border-radius: 15px;
+   margin-bottom:100px; 
+   color: white;
+   padding: 20px;
 }
 /* ------Footer section------- */
 .footer-section{
@@ -252,4 +300,32 @@ nav > ul{
    margin-bottom: 10%;
    align-items: center;
    padding: 35px;
+}
+
+/* -----------------------------------------Responsive for mobile----------------------------------------- */
+
+@media only screen and (max-width:640px){
+   nav ul, .logo{
+      flex-direction: column;
+   }
+.intro-title{
+   font-size: 55px;
+   padding: 0 25px;}
+.banner-image{
+   display:none;
+}
+.feature-img{
+   grid-template-columns: repeat(1,1fr);
+}
+.sr-img{
+   width:100%;
+}
+.feature-title, .feature-summary, .small-desp{
+   margin-left: 5px;
+}
+.service-btn{margin: 0;}
+.icon{margin-left: 50px;}
+.logo{ gap:44px;
+}
+
 }
